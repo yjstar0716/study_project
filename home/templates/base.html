@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n static %}
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="shortcut icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FciWU9U%2Fbtq1yOrBAlg%2FJg3eBBNAF8PhiY4x5NWFUK%2Fimg.png" type="image/vnd.microsoft.icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="{% static 'table_page.js' %}" ></script>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style_all.css' %}" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'index.css' %}" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'toggle_slider.css' %}" type="text/css" charset="utf-8">
+    {% block head %}
+    {% endblock head%}
+</head>
+<body>
+    <div class="st-Wrapper">
+        <header class="st-Header is-Hidden">
+        <a class="st-Header_Logo_Sp" href="/">
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvJFk8%2Fbtq1yEvWpF1%2FuBDIlRhkk9SBn99EzCVEcK%2Fimg.png" alt="logo"></a>
+        <button class="st-Header_Button">
+          <div class="st-Header_Button_Icon"><span></span><span></span><span></span></div>
+        </button>
+        <div class="st-Header-Container st-Header-Container-Close">
+        <a class="st-Header_Logo_Pc" href="/">
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvJFk8%2Fbtq1yEvWpF1%2FuBDIlRhkk9SBn99EzCVEcK%2Fimg.png" alt="logo"></a>
+          <nav class="st-Header_Nav is-loaded">
+            <ul class="st-Header_Nav_List">
+                <li><a class="current" href="/">HOME</a></li>
+                <li></li>
+                <div class="dropdown">
+                  <li><a><span>배달건수예측</span></a></li>
+                  <div class="dropdown-content">
+                    <li><a class="" href="/ann_analysis">요일별1</a><br><br>
+                    <a class="" href="/analysis">요일별2</a><br><br>
+                    <a class="" href="/rnn_analysis">지역별</a></li>
+                  </div>
+                </div>
+                <li></li>
+                <li><a class="" href="/please">배달건수분석</a></li>
+                <li></li>
+                <div class="dropdown">
+                  <li><a><span>STAFF&게시판</span></a></li>
+                  <div class="dropdown-content">
+                    <li><a class="" href="/blog/1">사장님꿀팁</a><br><br>
+                    <a class="" href="/staff">STAFF</a><br><br>
+                    <a class="" href="/pv">관련영상</a></li>
+                  </div>
+                </div>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+{% block title %}
+{% endblock title%}
+
+{%  block contents %}
+
+{% endblock contents%}
+
+        <main class="st-Main">
+
+{%  block explain_contents %}
+
+{% endblock explain_contents%}
+    </main>
+<div class="sw-BackToTop" style="visibility: visible; opacity: 1;"><a href="#"></a></div>
+
+<footer class="st-Footer">
+        <div class="st-Footer_Content">
+          <div class="st-Footer_Share">
+            <nav class="st-Footer_Nav">
+              <ul>
+              <li><a class="current" href="/">HOME</a></li>
+              <li><a class="" href="/analysis">요일배달량예측</a></li>
+              <li><a class="" href="/please">과거배달건수</a></li>
+              <li><a class="" href="/staff">STAFF&관련영상 </a></li>
+              </ul>
+            </nav>
+            <div class="st-Footer_Link">
+              <div class="logo"><a href="/"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvJFk8%2Fbtq1yEvWpF1%2FuBDIlRhkk9SBn99EzCVEcK%2Fimg.png" alt="logo"></a></div>
+                <div class="list">
+                <ul>
+                  <li><div class="icon_list">
+                      <p class="heading">참고했던 사이트들</p></div></li>
+                  <li><a class="hover" href="https://www.bigdata-telecom.kr/invoke/SOKBP0000/?ver=2.1" target="_blank">Kt통신 빅데이터 플랫폼</a></li>
+                  <li><a class="hover" href="https://data.kma.go.kr/cmmn/main.do" target="_blank">기상자료개방포털</a></li>
+                  <li><a class="hover" href="https://www.data.go.kr/index.do" target="_blank">공공데이터포털</a></li>
+                </ul>
+              </div>
+              <div class="st-Footer_Company">
+                <div class="companylist">
+                  <ul>
+                    <li><a class="hover" href="/" target="_blank"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcWrNTz%2Fbtq1EpD37IL%2FXCLvQDw5bBCIBgm33UyjR1%2Fimg.gif" alt="홈"></a></li>
+                    <li><a class="hover" href="/" target="_blank"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcWrNTz%2Fbtq1EpD37IL%2FXCLvQDw5bBCIBgm33UyjR1%2Fimg.gif" alt="홈2"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="st-Footer_Copyright">
+            <p><span class="txt">이 홈페이지는 개인 팀프로젝트로 제작되었습니다.</span><br class="sp_b">©천지창조.</p>
+        </div>
+      </footer>
+</div>
+<script src="https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/js/lib.js?1613555635774"></script>
+<script src="https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/js/petit-mix/app.bundle.js?1613555635774"></script>
+<div class="sw-BackToTop"></div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<style>
+        .ratio{padding-top:20px}
+
+        .ratio li{
+			float:left;
+			position:relative;
+			width:50px;
+			height:100px;
+			margin-right:10px;
+			list-style:none
+			}
+
+        .ratio div{
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+			background:red;
+			font-size:0
+			}
+
+        .ratio em{
+			position:absolute;
+			top:-20px;
+			width:100%;
+			font-size:12px;
+			font-weight:bold;
+			text-align:center
+			}
+    </style>
+{% endblock head%}
+{% block explain_contents %}
+<section class="idx-Onair">
+    <div class="st-Inner"><br><br><br><br><br><br>
+        <h2 class="sw-Ttl"></h2>
+        <div class="body"><div class="sw-Frame" style="background-color:#ffa0af;">
+            <div class="channel">
+                <div class="sw-Frame" style="width:70%;">
+                    <form name="frm" action="/korea_call/" method="get">
+                    <ul class="st-Header_Nav_List">
+                        <li><p>
+                        <img src="{% static '선형회귀.png' %}" border=0 alt="이미지"  height=70px>
+                        </p></li>
+                        <li><p class="sw-Subheading">요일:
+                            <select class="box" name = "weekday" style="background-color:#ccc">
+                                <option value="1">월</option><option value="2">화</option>
+                                <option value="3">수</option><option value="4">목</option>
+                                <option value="5">금</option><option value="6">토</option>
+                                <option value="7">일</option>
+                            </select>
+                        </p></li>
+                        <li><p class="sw-Subheading">방식:
+                            <select class="box" name = "chart_val" style="background-color:#ccc">
+                                <option value="1">표</option><option value="2">그래프</option>
+                            </select>
+                            <input class="box" type="submit" id="searchBtn" value="입력">
+                        </p></li>
+                    </ul>
+                    </form>
+                    {% if day %}
+                    <br><br><br>
+                    <li><p style="font-size:30px; color:purple; font-weight:bold;">{{day}} 분석 결과</p></li>
+                    {% endif %}
+                    </div>
+            </div>
+            <ul class="st-Header_Nav_List">
+                <div class="sw-Frame" style="width:50%; postion:relative;">
+                    {% if check %}
+                    <table class="headerTable" style="padding:10px">
+                        <tbody>
+                        <tr>
+                            <th scope="cols" class="header">지역</th>
+                            {% for label in label %}
+                            <th scope="cols" >{{label}}</th>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            <th scope="cols" class="header">예측 배달비율</th>
+                            {% for mean1 in mean %}
+                                <td scope="row">{{mean1}} %</td>
+                            {% endfor %}
+                        </tr>
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <table class="headerTable" style="padding:10px">
+                        <tbody>
+                        <tr>
+                            <th scope="cols" class="header">지역</th>
+                            <th scope="row">[견본]서울</th>
+                            <th scope="row">[견본]인천</th>
+                            <th scope="row">[견본]부산</th>
+                        </tr>
+                        <tr>
+                            <th scope="cols" class="header">예측 배달비율</th>
+                            <td>50.0 %</td>
+                            <td>32.7 %</td>
+                            <td>27.3 %</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                <div class="sw-Frame" style="width:50%; postion:relative;">
+                    {% if check %}
+                    <table class="headerTable" style="padding:10px">
+                        <tbody>
+                        <tr>
+                            <th scope="cols" class="header">지역</th>
+                            {% for label in label %}
+                            <th scope="cols" >{{label}}</th>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            <th scope="cols" class="header">예측 배달건수</th>
+                            {% for predict1 in pre %}
+                                <td scope="row">{{predict1}} 건</td>
+                            {% endfor %}
+                        </tr>
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <table class="headerTable" style="padding:10px">
+                        <tbody>
+                        <tr>
+                            <th scope="cols" class="header">지역</th>
+                            <th scope="row">[견본]서울</th>
+                            <th scope="row">[견본]인천</th>
+                            <th scope="row">[견본]부산</th>
+                        </tr>
+                        <tr>
+                            <th scope="cols" class="header">예측 배달건수</th>
+                            <td>123.45 건</td>
+                            <td>146.75 건</td>
+                            <td>104.59 건</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+            </ul>
+        </div></div>
+    </div>
+</section>
+
+{% endblock explain_contents %}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .ratio{padding-top:20px}
+
+        .ratio li{
+			float:left;
+			position:relative;
+			width:100px;
+			height:300px;
+			margin-right:10px;
+			list-style:none
+			}
+
+        .ratio div{
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+			background:red;
+			font-size:0
+			}
+
+        .ratio em{
+			position:absolute;
+			top:-20px;
+			width:100%;
+			font-size:12px;
+			font-weight:bold;
+			text-align:center
+			}
+    </style>
+</head>
+<body>
+
+    <ul class="ratio">
+        <li><div style="height:30%"><em>30%</em></div></li>
+        <li><div style="height:40%"><em>40%</em></div></li>
+        <li><div style="height:100%"><em>100%</em></div></li>
+    </ul>
+
+</body>
+</html>
+

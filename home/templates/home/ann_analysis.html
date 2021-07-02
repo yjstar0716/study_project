@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<style>
+        .ratio{padding-top:20px}
+
+        .ratio li{
+			float:left;
+			position:relative;
+			width:50px;
+			height:100px;
+			margin-right:10px;
+			list-style:none
+			}
+
+        .ratio div{
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+			background:red;
+			font-size:0
+			}
+
+        .ratio em{
+			position:absolute;
+			top:-20px;
+			width:100%;
+			font-size:12px;
+			font-weight:bold;
+			text-align:center
+			}
+    </style>
+{% endblock head%}
+{% block explain_contents %}
+<section class="idx-Onair">
+    <div class="st-Inner"><br><br><br><br><br><br>
+        <h2 class="sw-Ttl"></h2>
+        <div class="body"><div class="sw-Frame" style="background-color:#ffa0af;">
+            <div class="channel">
+                <div class="sw-Frame" style="width:70%;">
+                    <form name="frm" action="/ann_call/" method="get">
+                    <ul class="st-Header_Nav_List">
+                        <li><p>
+                        <img src="{% static 'Ann분석.png' %}" border=0 alt="이미지"  height=70px>
+                        </p></li>
+                        <li><p class="sw-Subheading">지역:
+                            <select class="box" name = "area" style="background-color:#ccc">
+                <option value="gangwon">강원도</option><option value="geonggi">경기도</option>
+            <option value="gyeongnam">경상남도</option><option value="gyeongbook">경상북도</option>
+            <option value="gwangju">광주광역시</option><option value="daegu">대구광역시</option>
+            <option value="daejeon">대전광역시</option><option value="busan">부산광역시</option>
+            <option value="seoul">서울특별시</option><option value="sejong">세종특별자치시</option>
+            <option value="incheon">인천광역시</option><option value="jeonnam">전라남도</option>
+            <option value="jeonbook">전라북도</option><option value="jeju">제주특별자치도</option>
+            <option value="chungnam">충청남도</option><option value="chungbook">충청북도</option></select>
+                        </p></li>
+                        <li><p class="sw-Subheading">방식:
+                            <select class="box" name = "chart_val" style="background-color:#ccc">
+                                <option value="1">표</option><option value="2">그래프</option>
+                            </select>
+                            <input class="box" type="submit" id="searchBtn" value="입력">
+                        </p></li>
+                    </ul>
+                    </form>
+                   {% if area %}
+                    <br><br><br>
+                    <li><p style="font-size:30px; color:purple; font-weight:bold;">{{area}} 분석 결과</p></li>
+                    {% endif %}
+                    </div>
+            </div>
+            <ul class="st-Header_Nav_List">
+                <div class="sw-Frame" style="width:100%; postion:relative;">
+                    {% if check %}
+                    <div style="width:100%; overflow:auto;">
+                    <table class="greenTable" style="padding:10px;">
+                        <thead><tr>
+                            <th>지역: {{area}}</th>
+                            {% for labels in labels %}
+                                <th scope="cols">{{labels}}</th>
+                            {% endfor %}
+                        </tr></thead>
+                        <tbody>
+                        <tr>
+                            <th scope="cols" class="header">예측 배달 건수</th>
+                            {% for predict1 in pre %}
+                                <td scope="cols">{{predict1}} 건</td>
+                            {% endfor %}
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    {% else %}
+                    <table class="greenTable" style="padding:10px">
+                        <tbody>
+                        <tr>
+                            <th scope="cols" class="header">요일별 예측 배달 건수</th>
+                            <td>예) 50.0 건</td>
+                            <td>예) 32.7 건</td>
+                            <td>예) 27.3 건</td>
+                            <td>예) 32.7 건</td>
+                            <td>예) 50.0 건</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+            </ul>
+        </div></div>
+    </div>
+</section>
+
+{% endblock explain_contents %}
+
+

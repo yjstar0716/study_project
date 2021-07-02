@@ -1,0 +1,1582 @@
+/* https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets */
+/*-------------------------------------------------------------------*/
+/* Reset */
+/*-------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: Georgia, "맑은 고딕", serif;/* fantasy, cursive, sans-serif */
+  /* font-style: normal, italic기울임, bold굵게 */
+  /* font-weight: normal, bold 700만큼, bolder두껍게, lighter얇게, 숫자 */
+  /* text-shadow: offset-x, offset-y, blur-radius기본값0, color기본값0 */
+  vertical-align: baseline; 
+}
+
+footer, header, hgroup, menu, nav, section {
+  display: block; }/*해당 클래스 공간할당*/
+
+body {
+  line-height: 1; }/*바디 내부 줄간격*/
+
+ol, ul {
+  list-style: none; }/*리스트옵션*/
+
+blockquote, q {
+  quotes: none; }/*기호 사용시 씀("기호" "기호2" 형식으로작성)*/
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;/*표테두리와 셀 테두리간격 처리*/
+  border-spacing: 0; }/* `` */
+
+/*-------------------------------------------------------------------*/
+/* Mixin */
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/* Keyframe */
+/*-------------------------------------------------------------------*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes animation_loader {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  51% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+
+@keyframes animation_loader {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  51% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+
+@-webkit-keyframes curtainUpStart {
+  0% {
+    -webkit-transform: translateY(101%);
+    transform: translateY(101%); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes curtainUpStart {
+  0% {
+    -webkit-transform: translateY(101%);
+    transform: translateY(101%); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes curtainUpEnd {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(-101%);
+    transform: translateY(-101%); } }
+
+@keyframes curtainUpEnd {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(-101%);
+    transform: translateY(-101%); } }
+
+@-webkit-keyframes curtainDownStart {
+  0% {
+    -webkit-transform: translateY(-101%);
+    transform: translateY(-101%); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes curtainDownStart {
+  0% {
+    -webkit-transform: translateY(-101%);
+    transform: translateY(-101%); }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes curtainDownEnd {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(101%);
+    transform: translateY(101%); } }
+
+@keyframes curtainDownEnd {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(101%);
+    transform: translateY(101%); } }
+
+@-webkit-keyframes curtainRightStart {
+  0% {
+    -webkit-transform: translateX(-101%);
+    transform: translateX(-101%); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateY(0); } }
+
+@keyframes curtainRightStart {
+  0% {
+    -webkit-transform: translateX(-101%);
+    transform: translateX(-101%); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes curtainRightEnd {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(101%);
+    transform: translateX(101%); } }
+
+@keyframes curtainRightEnd {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(101%);
+    transform: translateX(101%); } }
+
+/*-------------------------------------------------------------------*/
+/* Foundation */
+/*-------------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 1.30208vw; } }
+
+body {
+  min-width: 1200px;
+  font-family: font: Georgia, "맑은 고딕", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  letter-spacing: 0.05em; }
+  @media screen and (max-width: 1024px) {
+    body {
+      min-width: 100%;
+      -webkit-text-size-adjust: 100%;
+      -webkit-overflow-scrolling: touch; } }
+
+.preload * {
+  -webkit-transition: none !important;
+  transition: none !important;
+  -webkit-transition-delay: unset !important;
+          transition-delay: unset !important; }
+
+.resizing *,
+.resizing *:before,
+.resizing *:after {
+  -webkit-transition: none !important;
+  transition: none !important;
+  -webkit-transition-delay: unset !important;
+          transition-delay: unset !important; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  zoom: 1; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  pointer-events: none; }
+  @media screen and (max-width: 1024px) {
+    img {
+      width: 100%;
+      height: auto; } }
+
+.hover {
+  display: block; }
+  @media print, screen and (min-width: 1025px) {
+    .hover {
+      -webkit-transition: opacity .3s;
+      transition: opacity .3s; }
+      .hover:hover {
+        opacity: .7;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+        cursor: pointer; } }
+
+.pc_b {
+  display: block !important; }
+  @media screen and (max-width: 1024px) {
+    .pc_b {
+      display: none !important; } }
+
+.pc_i {
+  display: inline !important; }
+  @media screen and (max-width: 1024px) {
+    .pc_i {
+      display: none !important; } }
+
+.pc_ib {
+  display: inline-block !important; }
+  @media screen and (max-width: 1024px) {
+    .pc_ib {
+      display: none !important; } }
+
+.pc_f {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+  @media screen and (max-width: 1024px) {
+    .pc_f {
+      display: none !important; } }
+
+.sp_b {
+  display: none !important; }
+  @media screen and (max-width: 1024px) {
+    .sp_b {
+      display: block !important; } }
+
+.sp_i {
+  display: none !important; }
+  @media screen and (max-width: 1024px) {
+    .sp_i {
+      display: inline !important; } }
+
+.sp_ib {
+  display: none !important; }
+  @media screen and (max-width: 1024px) {
+    .sp_ib {
+      display: inline-block !important; } }
+
+.sp_f {
+  display: none !important; }
+  @media screen and (max-width: 1024px) {
+    .sp_f {
+      display: -webkit-box !important;
+      display: -webkit-flex !important;
+      display: -ms-flexbox !important;
+      display: flex !important; } }
+
+/*-------------------------------------------------------------------*/
+/* Module */
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/* sw */
+/*-------------------------------------------------------------------*/
+.sw-Ttl {
+  margin: 0 auto 73px auto;
+  text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .sw-Ttl {
+      margin: 0 auto 5.85938vw auto; } }
+  .sw-Ttl span {
+    margin: 2px 0 0 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #8232a1;
+    display: block;
+    letter-spacing: 0.05em; }
+    @media screen and (max-width: 1024px) {
+      .sw-Ttl span {
+        margin: 1.04167vw 0 0 0;
+        font-size: 2.2rem; } }
+
+.sw-Subttl {
+  width: 100%;
+  height: 62px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 62px;
+  background-image: -webkit-linear-gradient(0deg, rgba(254, 208, 51, 0.99608) 0%, #fa567d 100%);
+  background-image: -ms-linear-gradient(0deg, rgba(254, 208, 51, 0.99608) 0%, #fa567d 100%);
+  border-radius: 10px 10px 0 0; }
+  @media screen and (max-width: 1024px) {
+    .sw-Subttl {
+      height: 10.41667vw;
+      line-height: 10.41667vw;
+      border-radius: 1.30208vw 1.30208vw 0 0; } }
+
+.sw-Subheading {
+  margin: 0 0 0 -35px;
+  padding: 0 0 0 35px;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #8232a1;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .sw-Subheading {
+      margin: 0 0 0 -4.55729vw;
+      padding: 0 0 0 4.55729vw;
+      font-size: 3.2rem; } }
+  .sw-Subheading:after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/index/icon_kira.png) no-repeat 0 0/100% auto; }
+    @media screen and (max-width: 1024px) {
+      .sw-Subheading:after {
+        width: 3.38542vw;
+        height: 3.38542vw;
+        top: 57%; } }
+
+.sw-Txt {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 500; }
+  @media screen and (max-width: 1024px) {
+    .sw-Txt {
+      font-size: 2.6rem; } }
+
+.sw-Txt-02 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 700; }
+  @media screen and (max-width: 1024px) {
+    .sw-Txt-02 {
+      font-size: 2.4rem;
+      line-height: 1.8; } }
+
+.sw-Frame {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #8232a1;
+  background: #fff;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="0" /><feOffset dx="9" dy="9" result="offsetblur" /><feFlood flood-color="rgba(245,167,0,0.3)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(8px 8px 0 rgba(245, 167, 0, 0.3));
+          filter: drop-shadow(8px 8px 0 rgba(245, 167, 0, 0.3));
+  will-change: filter; }
+  @media screen and (max-width: 1024px) {
+    .sw-Frame {
+      border-radius: 2.60417vw;
+      border: 0.26042vw solid #8232a1;
+      -webkit-filter: drop-shadow(1.04167vw 1.04167vw 0 rgba(245, 167, 0, 0.3));
+              filter: drop-shadow(1.04167vw 1.04167vw 0 rgba(245, 167, 0, 0.3)); } }
+
+.sw-Btn {
+  width: 380px;
+  height: 74px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .sw-Btn {
+      width: 59.89583vw;
+      height: 13.02083vw;
+      margin: 7.55208vw auto 0 auto; } }
+  .sw-Btn a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 74px;
+    color: #fff;
+    letter-spacing: 0.05em;
+    background: #8232a1;
+    border-radius: 37px;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="0" /><feOffset dx="9" dy="9" result="offsetblur" /><feFlood flood-color="rgba(245,167,0,0.3)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(8px 8px 0 rgba(245, 167, 0, 0.3));
+            filter: drop-shadow(8px 8px 0 rgba(245, 167, 0, 0.3));
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    will-change: filter; }
+    @media screen and (max-width: 1024px) {
+      .sw-Btn a {
+        font-size: 3.64583vw;
+        line-height: 13.02083vw;
+        border-radius: 6.51042vw;
+        -webkit-filter: drop-shadow(1.04167vw 1.04167vw 0 rgba(245, 167, 0, 0.3));
+                filter: drop-shadow(1.04167vw 1.04167vw 0 rgba(245, 167, 0, 0.3)); } }
+    .sw-Btn a[target=_blank]:after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      display: block;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g style="fill:none;stroke:%23fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline class="st0" points="14,1 23,1 23,10"/><polyline class="st0" points="19,15 19,23 1,23 1,5 9,5"/><line class="st0" x1="11" y1="13" x2="22" y2="2"/></g></svg>') 0 0 no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 47%;
+      right: 30px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+      @media screen and (max-width: 1024px) {
+        .sw-Btn a[target=_blank]:after {
+          width: 2.60417vw;
+          height: 2.60417vw;
+          right: 3.90625vw;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%); } }
+    .sw-Btn a:hover {
+      -webkit-filter: none;
+              filter: none;
+      -webkit-transform: translate(8px, 8px);
+              transform: translate(8px, 8px); }
+
+.sw-BackToTop {
+  width: 92px;
+  height: 105px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 9; }
+  @media screen and (max-width: 1024px) {
+    .sw-BackToTop {
+      width: 13.28125vw;
+      height: 15.36458vw;
+      bottom: 1.95312vw;
+      right: 1.95312vw; } }
+  .sw-BackToTop a {
+    height: 100%;
+    display: block;
+    background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/icon_back-to-top.png) 50% 50% no-repeat;
+    background-size: 100% auto;
+    /* hover */ }
+    @media print, screen and (min-width: 1025px) {
+      .sw-BackToTop a {
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s; }
+        .sw-BackToTop a:hover {
+          -webkit-transform: scale(1.1);
+                  transform: scale(1.1); } }
+
+/*-------------------------------------------------------------------*/
+/* st */
+/*-------------------------------------------------------------------*/
+/* =============================================================== */
+/* .st-Container */
+/* =============================================================== */
+.st-Wrapper {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/bg_main.png); }
+  @media screen and (max-width: 1024px) {
+    .st-Wrapper {
+      background-size: 6.51042vw 6.51042vw; } }
+
+body.showModal {
+  overflow: hidden !important; }
+  body.showModal .st-Header_Logo_Sp {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; }
+
+/* =============================================================== */
+/* .st-Main */
+/* =============================================================== */
+.st-Main {
+  display: block; }
+  @media screen and (max-width: 1330px) {
+    .st-Main:after {
+      content: "";
+      width: 100%;
+      height: 120vh;
+      top: 0;
+      position: fixed;
+      background: rgba(130, 50, 161, 0.7);
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      z-index: -1;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+    .st-Main.veil:after {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      z-index: 10; } }
+
+/* =============================================================== */
+/* .st-Inner */
+/* =============================================================== */
+.st-Inner {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .st-Inner {
+      width: 89.58333vw; } }
+
+/* =============================================================== */
+/* .st-Header */
+/* =============================================================== */
+.st-Header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 100; }
+  @media screen and (max-width: 1024px) {
+    .st-Header {
+      min-width: 100%;
+      height: 17.1875vw; } }
+  @media print, screen and (min-width: 1331px) {
+    .st-Header.scrolled .st-Header_Logo_Pc {
+      -webkit-transform: translate(-25px, -5px) scale(0.825);
+              transform: translate(-25px, -5px) scale(0.825);
+      margin: 0; } }
+  .st-Header_Button {
+    border: none;
+    outline: none;
+    background: none; }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header_Button {
+        display: none; } }
+    .st-Header_Button:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/header/btn_menu.png) no-repeat 0 0/100% auto;
+      -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: -webkit-transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+    @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+      .st-Header_Button {
+        width: 121px;
+        height: 121px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+        cursor: pointer; } }
+    @media screen and (max-width: 1024px) {
+      .st-Header_Button {
+        width: 15.75521vw;
+        height: 15.75521vw;
+        position: absolute;
+        top: 2.60417vw;
+        right: 2.60417vw;
+        z-index: 3; } }
+    .st-Header_Button_Icon {
+      z-index: 2; }
+      @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+        .st-Header_Button_Icon {
+          width: 22px;
+          height: 18px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
+      @media screen and (max-width: 1024px) {
+        .st-Header_Button_Icon {
+          width: 2.86458vw;
+          height: 2.34375vw;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
+      @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+        .st-Header_Button_Icon span {
+          display: inline-block;
+          width: 22px;
+          height: 2px;
+          background-color: #fff;
+          border-radius: 2px;
+          position: absolute;
+          -webkit-transition: .3s;
+          transition: .3s; } }
+      @media screen and (max-width: 1024px) {
+        .st-Header_Button_Icon span {
+          display: inline-block;
+          width: 2.86458vw;
+          height: 0.26042vw;
+          background-color: #fff;
+          border-radius: 0.26042vw;
+          position: absolute;
+          -webkit-transition: .3s;
+          transition: .3s; } }
+      @media screen and (max-width: 1330px) {
+        .st-Header_Button_Icon span:nth-child(1) {
+          top: 0;
+          left: 0;
+          -webkit-transform: translateY(0) rotate(0);
+                  transform: translateY(0) rotate(0); } }
+      @media screen and (max-width: 1330px) {
+        .st-Header_Button_Icon span:nth-child(2) {
+          display: inline-block;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%); } }
+      @media screen and (max-width: 1330px) {
+        .st-Header_Button_Icon span:nth-child(3) {
+          top: auto;
+          bottom: 0;
+          left: 0;
+          -webkit-transform: translateY(0) rotate(0);
+                  transform: translateY(0) rotate(0); } }
+    .st-Header_Button.opened:after {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); }
+    @media screen and (max-width: 1330px) {
+      .st-Header_Button.opened span:nth-child(1) {
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg); } }
+    @media screen and (max-width: 1330px) {
+      .st-Header_Button.opened span:nth-child(2) {
+        display: none;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); } }
+    @media screen and (max-width: 1330px) {
+      .st-Header_Button.opened span:nth-child(3) {
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg); } }
+  .st-Header-Container {
+    width: 100%;
+    position: relative;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header-Container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 0 100px 0 36px;
+        height: 80px;
+        border-radius: 0 0 64px 64px;
+        background-image: -webkit-linear-gradient(180deg, rgba(254, 208, 51, 0.99608) 0%, #fa567d 100%);
+        background-image: -ms-linear-gradient(180deg, rgba(254, 208, 51, 0.99608) 0%, #fa567d 100%); } }
+    @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+      .st-Header-Container {
+        width: 518px;
+        height: 100vh;
+        padding: 208px 0 0 0;
+        z-index: 2;
+        left: calc(100% - 518px);
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        pointer-events: all;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/header/bg_sp-menu.png) repeat-y 0 0/100% auto; } }
+    @media screen and (max-width: 1024px) {
+      .st-Header-Container {
+        width: 67.44792vw;
+        height: 120vh;
+        padding: 27.08333vw 0 0 0;
+        z-index: 2;
+        left: 32.55208vw;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        pointer-events: all;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/header/bg_sp-menu.png) repeat-y 0 0/100% auto; } }
+    @media screen and (max-width: 1331px) {
+      .st-Header-Container-Close {
+        left: 100%;
+        pointer-events: none; } }
+  .st-Header_Logo_Pc {
+    -webkit-transition: .3s;
+    transition: .3s; }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header_Logo_Pc {
+        width: 346px;
+        height: 200px;
+        margin: 12px 0 0 0;
+        display: block; }
+        .st-Header_Logo_Pc img {
+          width: 100%; } }
+    @media screen and (max-width: 1331px) {
+      .st-Header_Logo_Pc {
+        display: none;
+        z-index: 2; } }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header_Logo_Pc:hover {
+        opacity: 0.65;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)"; } }
+  .st-Header_Logo_Sp {
+    -webkit-transition: .3s;
+    transition: .3s; }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header_Logo_Sp {
+        display: none; } }
+    @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+      .st-Header_Logo_Sp {
+        display: block;
+        margin: 0 auto;
+        width: 288px;
+        position: absolute;
+        top: 18px;
+        left: 9px;
+        z-index: 2; }
+        .st-Header_Logo_Sp img {
+          width: 100%; } }
+    @media screen and (max-width: 1024px) {
+      .st-Header_Logo_Sp {
+        display: block;
+        margin: 0 auto;
+        width: 37.5vw;
+        position: absolute;
+        top: 2.34375vw;
+        left: 1.17188vw;
+        z-index: 2; } }
+    @media print, screen and (min-width: 1025px) {
+      .st-Header_Logo_Sp:hover {
+        opacity: 0.65;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)"; } }
+  .st-Header_Nav {
+    position: relative; }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header_Nav {
+        padding: 25px 0 0 0; } }
+    @media screen and (max-width: 1330px) {
+      .st-Header_Nav {
+        padding: 0;
+        width: 100%; } }
+    @media screen and (max-width: 1024px) {
+      .st-Header_Nav:before, .st-Header_Nav:after {
+        content: ""; } }
+    @media screen and (max-width: 1330px) {
+      .st-Header_Nav:before {
+        top: 0; } }
+    @media screen and (max-width: 1330px) {
+      .st-Header_Nav:after {
+        bottom: 0; } }
+    @media print, screen and (min-width: 1331px) {
+      .st-Header_Nav_List {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+    @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+      .st-Header_Nav_List {
+        margin: 0 0 0 59px; } }
+    @media screen and (max-width: 1024px) {
+      .st-Header_Nav_List {
+        margin: 0 0 0 7.68229vw; } }
+    .st-Header_Nav_List li + li {
+      margin: 0 0 0 57px; }
+      @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+        .st-Header_Nav_List li + li {
+          margin: 110px 0 0 0; } }
+      @media screen and (max-width: 1024px) {
+        .st-Header_Nav_List li + li {
+          margin: 14.32292vw 0 0 0; } }
+    .st-Header_Nav_List li a {
+      padding: 0 0 0 31px;
+      font-size: 23px;
+      font-size: 2.3rem;
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.1em;
+      color: #fff;
+      position: relative;
+      text-shadow: 4px 4px 0px rgba(130, 50, 161, 0.3);
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+        .st-Header_Nav_List li a {
+          padding: 0 0 0 66px; } }
+      @media screen and (max-width: 1024px) {
+        .st-Header_Nav_List li a {
+          padding: 0 0 0 8.59375vw;
+          font-size: 4.5rem;
+          letter-spacing: 0.05em;
+          text-shadow: 0.52083vw 0.52083vw 0px rgba(130, 50, 161, 0.3); } }
+      .st-Header_Nav_List li a:before {
+        content: "";
+        width: 0;
+        height: 3px;
+        margin: 0 auto;
+        background: #fff;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        position: absolute;
+        bottom: -7px;
+        left: 31px;
+        right: 0; }
+      .st-Header_Nav_List li a:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/header/icon_nav.png) no-repeat 0 0/100% auto;
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="0" /><feOffset dx="5" dy="5" result="offsetblur" /><feFlood flood-color="rgba(130,50,161,0.3)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+        -webkit-filter: drop-shadow(4px 4px 0 rgba(130, 50, 161, 0.3));
+                filter: drop-shadow(4px 4px 0 rgba(130, 50, 161, 0.3)); }
+        @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+          .st-Header_Nav_List li a:after {
+            width: 26px;
+            height: 26px;
+            background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/header/icon_nav.png) no-repeat 0 0/100% auto; } }
+        @media screen and (max-width: 1024px) {
+          .st-Header_Nav_List li a:after {
+            width: 4.42708vw;
+            height: 4.42708vw;
+            -webkit-filter: drop-shadow(0.52083vw 0.52083vw 0 rgba(130, 50, 161, 0.3));
+                    filter: drop-shadow(0.52083vw 0.52083vw 0 rgba(130, 50, 161, 0.3));
+            background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/header/icon_nav.png) no-repeat 0 0/100% auto; } }
+      @media print, screen and (min-width: 1331px) {
+        .st-Header_Nav_List li a:hover:before {
+          width: calc(100% - 31px); }
+        .st-Header_Nav_List li a:hover:after {
+          -webkit-transform: translateY(-50%) scale(-1, 1);
+                  transform: translateY(-50%) scale(-1, 1);
+          -webkit-filter: none;
+                  filter: none; } }
+      @media print, screen and (min-width: 1025px) and (max-width: 1330px) {
+        .st-Header_Nav_List li a:hover:after {
+          -webkit-transform: translateY(-50%) scale(-1, 1);
+                  transform: translateY(-50%) scale(-1, 1);
+          -webkit-filter: none;
+                  filter: none; } }
+      @media print, screen and (min-width: 1331px) {
+        .st-Header_Nav_List li a.current:before {
+          width: calc(100% - 31px); } }
+
+/* =============================================================== */
+/* .st-Footer */
+/* =============================================================== */
+.st-Footer {
+  height: 694px;
+  background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/footer/bg_footer.png) no-repeat 50% 0/cover; }
+  @media print, screen and (min-width: 1921px) {
+    .st-Footer {
+      background-size: 100% auto; } }
+  @media screen and (max-width: 1024px) {
+    .st-Footer {
+      height: 179.29688vw;
+      background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/footer/bg_footer.png) no-repeat 50% 0/cover; } }
+  .st-Footer_Content {
+    width: 1200px;
+    padding: 110px 0 0 0;
+    margin: 0 auto; }
+    @media screen and (max-width: 1024px) {
+      .st-Footer_Content {
+        width: 82.03125vw;
+        padding: 22.13542vw 0 0 0; } }
+  .st-Footer_Share .icon_list {
+    width: 446px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media screen and (max-width: 1024px) {
+      .st-Footer_Share .icon_list {
+        width: 82.03125vw; } }
+    .st-Footer_Share .icon_list .heading {
+      display: inline-block;
+      font-size: 32px;
+      font-size: 3.2rem;
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.1em;
+      color: #8232a1;
+      position: relative; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Share .icon_list .heading {
+          font-size: 4.4rem;
+          margin-right: 17.96875vw; } }
+      .st-Footer_Share .icon_list .heading:after {
+        content: "";
+        width: 49px;
+        height: 11px;
+        position: absolute;
+        top: 30%;
+        left: calc(100% + 25px);
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/footer/arrow_share.png) no-repeat 0 0/100% auto; }
+        @media screen and (max-width: 1024px) {
+          .st-Footer_Share .icon_list .heading:after {
+            width: 9.50521vw;
+            height: 1.95312vw;
+            top: 45%;
+            left: calc(100% + 5vw);
+            background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/footer/arrow_share.png) no-repeat 0 0/100% 100%; } }
+    .st-Footer_Share .icon_list ul {
+      width: 216px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Share .icon_list ul {
+          width: 39.58333vw; } }
+      .st-Footer_Share .icon_list ul .icon {
+        width: 60px;
+        height: 60px; }
+        @media screen and (max-width: 1024px) {
+          .st-Footer_Share .icon_list ul .icon {
+            width: 10.9375vw;
+            height: 10.9375vw; } }
+  .st-Footer_Nav ul {
+    margin: 92px 0 0 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media screen and (max-width: 1024px) {
+      .st-Footer_Nav ul {
+        width: 82.03125vw;
+        margin: 11.06771vw auto 0 auto;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
+    @media screen and (max-width: 1024px) {
+      .st-Footer_Nav ul li {
+        width: 41.01562vw; }
+        .st-Footer_Nav ul li:nth-child(n+3) {
+          margin: 6.51042vw 0 0 0; } }
+    .st-Footer_Nav ul li + li {
+      margin: 0 0 0 92px; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Nav ul li + li {
+          margin: 0; } }
+    .st-Footer_Nav ul li a {
+      padding: 0 0 0 31px;
+      font-size: 23px;
+      font-size: 2.3rem;
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.1em;
+      color: #8232a1;
+      position: relative;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Nav ul li a {
+          padding: 0 0 0 6.51042vw;
+          font-size: 2.8rem; } }
+      .st-Footer_Nav ul li a:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/footer/icon_nav.png) no-repeat 0 0/100% auto; }
+        @media screen and (max-width: 1024px) {
+          .st-Footer_Nav ul li a:after {
+            width: 3.38542vw;
+            height: 3.38542vw; } }
+      .st-Footer_Nav ul li a:hover:after {
+        -webkit-transform: translateY(-50%) scale(-1, 1);
+                transform: translateY(-50%) scale(-1, 1); }
+  .st-Footer_Link {
+    width: 932px;
+    margin: 100px 0 0 124px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media screen and (max-width: 1024px) {
+      .st-Footer_Link {
+        width: 82.03125vw;
+        margin: 14.19271vw auto 0 auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .st-Footer_Link .logo a {
+      display: block; }
+    .st-Footer_Link .logo img {
+      width: 209px;
+      height: auto; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Link .logo img {
+          width: 46.09375vw; } }
+    .st-Footer_Link .list {
+      margin: -12px 0 0 62px; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Link .list {
+          width: 100%;
+          height: auto;
+          margin: 9.11458vw auto 0 auto; } }
+      .st-Footer_Link .list li {
+        line-height: 1.5; }
+        .st-Footer_Link .list li + li {
+          margin: 16px 0 0 0; }
+          @media screen and (max-width: 1024px) {
+            .st-Footer_Link .list li + li {
+              margin: 2.60417vw 0 0 0; } }
+        .st-Footer_Link .list li a {
+          font-size: 13px;
+          font-size: 1.3rem;
+          color: #8232a1;
+          font-weight: bold;
+          position: relative;
+          letter-spacing: 0.1em; }
+          @media screen and (max-width: 1024px) {
+            .st-Footer_Link .list li a {
+              font-size: 2.4rem;
+              margin-left: 5.20833vw;
+              letter-spacing: 0.05em; } }
+          .st-Footer_Link .list li a:before, .st-Footer_Link .list li a:after {
+            content: ""; }
+          .st-Footer_Link .list li a:before {
+            width: 19px;
+            height: 19px;
+            display: block;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66"><g style="fill:%238232a1;"><path d="M35.7,8.1V28h-5V8.1C18,9.3,8,20,8,33c0,13.8,11.2,25,25,25s25-11.2,25-25C58,20.1,48.2,9.5,35.7,8.1z"/><rect x="30.7" width="5" height="8"/><rect x="30.7" y="58" width="5" height="8"/><rect x="1.5" y="28.8" transform="matrix(4.474738e-11 -1 1 4.474738e-11 -28.7812 36.7812)" width="5" height="8"/><rect x="59.5" y="28.8" transform="matrix(4.474738e-11 -1 1 4.474738e-11 29.2188 94.7812)" width="5" height="8"/></g></svg>') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: -26px; }
+            @media screen and (max-width: 1024px) {
+              .st-Footer_Link .list li a:before {
+                width: 4.29688vw;
+                height: 4.29688vw;
+                top: 0.65104vw;
+                left: -5.20833vw; } }
+          .st-Footer_Link .list li a:after {
+            width: 14px;
+            height: 14px;
+            margin: 0 0 0 6px;
+            display: inline-block;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g style="fill:none;stroke:%238232a1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline class="st0" points="14,1 23,1 23,10"/><polyline class="st0" points="19,15 19,23 1,23 1,5 9,5"/><line class="st0" x1="11" y1="13" x2="22" y2="2"/></g></svg>') 0 0 no-repeat;
+            background-size: contain;
+            -webkit-transform: translateY(1px);
+                    transform: translateY(1px); }
+            @media all and (-ms-high-contrast: none) {
+              .st-Footer_Link .list li a:after {
+                background-size: contain; } }
+            @media screen and (max-width: 1024px) {
+              .st-Footer_Link .list li a:after {
+                width: 3.38542vw;
+                height: 3.38542vw;
+                margin: 0 0 0 0.65104vw;
+                -webkit-transform: translateY(0.26042vw);
+                        transform: translateY(0.26042vw); } }
+    .st-Footer_Link .st-Footer_Company {
+      width: 186px;
+      margin: 0 0 0 142px; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Link .st-Footer_Company {
+          width: 47.91667vw;
+          margin: 10.28646vw 0 0 0; } }
+      .st-Footer_Link .st-Footer_Company ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .st-Footer_Link .st-Footer_Company ul img {
+          width: 79px;
+          height: auto; }
+          @media screen and (max-width: 1024px) {
+            .st-Footer_Link .st-Footer_Company ul img {
+              width: 20.3125vw; } }
+  .st-Footer_Copyright {
+    text-align: center;
+    padding: 74px 0 0 0; }
+    @media screen and (max-width: 1024px) {
+      .st-Footer_Copyright {
+        padding: 7.8125vw 0 0 0; } }
+    .st-Footer_Copyright p {
+      font-size: 13px;
+      color: #8232a1; }
+      @media screen and (max-width: 1024px) {
+        .st-Footer_Copyright p {
+          font-size: 2.60417vw;
+          line-height: 1.8;
+          letter-spacing: 0.01em; } }
+
+.sub-Character {
+  width: 100%;
+  padding: 160px 0 108px 0;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .sub-Character {
+      padding: 25.78125vw 0 14.32292vw 0; } }
+
+  .sub-Character .body .content .logo {
+    margin: 0 0 80px 0;
+    text-align: center; }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content .logo {
+        margin: 0 auto 10.41667vw auto; } }
+  .sub-Character .body .content .character-list {
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content .character-list {
+        width: 82.03125vw;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
+    .sub-Character .body .content .character-list li {
+      width: 263px; }
+      @media screen and (max-width: 1024px) {
+        .sub-Character .body .content .character-list li {
+          width: 37.76042vw; }
+          .sub-Character .body .content .character-list li:nth-child(n+3) {
+            margin: 10.41667vw 0 0 0; } }
+      .sub-Character .body .content .character-list li .image {
+        width: 263px;
+        height: 263px;
+        margin: 0 0 21px 0;
+        position: relative; }
+        @media screen and (max-width: 1024px) {
+          .sub-Character .body .content .character-list li .image {
+            width: 37.76042vw;
+            height: 37.76042vw;
+            margin: 0 0 3.125vw 0; } }
+      .sub-Character .body .content .character-list li .name {
+        margin: 0 0 13px 0;
+        text-align: center; }
+        @media screen and (max-width: 1024px) {
+          .sub-Character .body .content .character-list li .name {
+            margin: 0 auto 1.43229vw auto; } }
+      .sub-Character .body .content .character-list li .cv {
+        margin: 0 0 28px 0;
+        text-align: center;
+        font-size: 18px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #666; }
+        @media screen and (max-width: 1024px) {
+          .sub-Character .body .content .character-list li .cv {
+            margin: 0 0 3.64583vw 0;
+            font-size: 2.2rem; } }
+      .sub-Character .body .content .character-list li .text {
+        text-align: justify;
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.75; }
+        @media screen and (max-width: 1024px) {
+          .sub-Character .body .content .character-list li .text {
+            font-size: 2.4rem; } }
+  .sub-Character .body .content#anal {
+    margin: 0 0 18px 0;
+    padding: 0 0 190px 0;
+    background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/character/bg_happy-around.png) no-repeat 50% 18px; }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#anal {
+        margin: 0 0 9.24479vw 0;
+        padding: 0 0 26.04167vw 0;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/character/bg_happy-around.png) no-repeat 50% 14.32292vw;
+        background-size: 100% auto; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#anal .logo {
+        width: 36.58854vw; } }
+	.sub-Character .body .content#anal .character-list li .image {
+      background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/character/bg_character_happy-around.png) no-repeat 0 0/100% auto; }
+    .sub-Character .body .content#anal .character-list li.jin .image:after {
+      content: "";
+      width: 101px;
+      height: 277px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 7px;
+      background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb9IC7q%2Fbtq20EWajIU%2Fkx2N3xl8nNwTLvGYAiw7Q1%2Fimg.png ) no-repeat 0 100%/100% auto; }
+      @media screen and (max-width: 1024px) {
+        .sub-Character .body .content#anal .character-list li.jin .image:after {
+          width: 13.95833vw;
+          height: 39.5vw;
+          bottom: 1.5625vw; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#anal .character-list li.jin .name {
+        width: 21.875vw; } }
+    .sub-Character .body .content#anal .character-list li.dong .image:after {
+      content: "";
+      width: 101px;
+      height: 277px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 0px;
+      background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyMAeQ%2Fbtq26pQwcLT%2FuX20MObkuFCXV4g9ptmkok%2Fimg.png) no-repeat 0 0/100% auto; }
+      @media screen and (max-width: 1024px) {
+        .sub-Character .body .content#anal .character-list li.dong .image:after {
+          width: 13.95833vw;
+          height: 39.5vw;
+          bottom: 1.5625vw; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#anal .character-list li.dong .name {
+        width: 21.875vw; } }
+    
+  .sub-Character .body .content#design {
+    margin: 0 0 18px 0;
+    padding: 0 0 200px 0;
+    background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/character/bg_peakyp-key.png) no-repeat 50% 36px; }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#design {
+        margin: 0 0 9.24479vw 0;
+        padding: 0 0 26.04167vw 0;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/character/bg_peakyp-key.png) no-repeat 50% 14.71354vw;
+        background-size: 100% auto; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#design .logo {
+        width: 20.05208vw; } }
+    .sub-Character .body .content#design .character-list li .image {
+      background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/character/bg_character_peakyp-key.png) no-repeat 0 0/100% auto; }
+    .sub-Character .body .content#design .character-list li.gon .image:after {
+      content: "";
+      width: 101px;
+      height: 277px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 10px;
+      background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbiFq3l%2Fbtq21oMk790%2FQkt9U3TG7WTFJG9jhIcPJk%2Fimg.png) no-repeat 0 100%/100% auto; }
+      @media screen and (max-width: 1024px) {
+        .sub-Character .body .content#design .character-list li.gon .image:after {
+          width: 13.95833vw;
+          height: 39.5vw;
+          bottom: 2.60417vw; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#design .character-list li.gon .name {
+        width: 19.14062vw; } }
+    
+    
+  .sub-Character .body .content#site {
+    margin: 0 0 18px 0;
+    padding: 21px 0 150px 0;
+    background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/character/bg_rondo.png) no-repeat 50% 0; }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#site {
+        margin: 0 0 9.24479vw 0;
+        padding: 0 0 26.04167vw 0;
+        background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/character/bg_rondo.png) no-repeat 50% 5.20833vw;
+        background-size: 100% auto; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#site .logo {
+        width: 29.16667vw; } }
+    .sub-Character .body .content#site .character-list li .image {
+      background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/common/petit-mix/character/bg_character_rondo.png) no-repeat 0 0/100% auto; }
+    .sub-Character .body .content#site .character-list li.sin .image:after {
+      content: "";
+      width: 101px;
+      height: 277px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 0px;
+      background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyzA0C%2Fbtq24IC0ORC%2FRifc4zCILj4orGgutbUYZ1%2Fimg.png ) no-repeat 0 100%/100% auto; }
+      @media screen and (max-width: 1024px) {
+        .sub-Character .body .content#site .character-list li.sin .image:after {
+          width: 13.95833vw;
+          height: 39.5vw;
+          bottom: 2.60417vw; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#site .character-list li.sin .name {
+        width: 19.14062vw; } }
+    .sub-Character .body .content#site .character-list li.han .image:after {
+      content: "";
+      width: 101px;
+      height: 277px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 0px;
+      background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmpH1T%2Fbtq21p5vyDv%2Fyc63rZD0o50nQVPGiRHy5K%2Fimg.png) no-repeat 0 0/100% auto; }
+      @media screen and (max-width: 1024px) {
+        .sub-Character .body .content#site .character-list li.han .image:after {
+          width: 13.95833vw;
+          height: 39.5vw;
+          bottom: 2.60417vw; } }
+    @media screen and (max-width: 1024px) {
+      .sub-Character .body .content#site .character-list li.han .name {
+        width: 19.14062vw; } }
+		
+.idx-Onair {
+  width: 100%;
+  padding: 61px 0 108px 0;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .idx-Onair {
+      padding: 7.55208vw 0 14.0625vw 0; } }
+  .idx-Onair .sw-Ttl {
+    margin: 0 auto 58px auto; }
+    @media screen and (max-width: 1024px) {
+      .idx-Onair .sw-Ttl {
+        width: 50vw;
+        margin: 0 auto 6.51042vw auto; } }
+  .idx-Onair .body .sw-Frame {
+    padding: 20px; }
+    @media screen and (max-width: 1024px) {
+      .idx-Onair .body .sw-Frame {
+        padding: 5.20833vw; } }
+    .idx-Onair .body .sw-Frame .channel {
+      margin: 0 0 58px 0; }
+      @media screen and (max-width: 1024px) {
+        .idx-Onair .body .sw-Frame .channel {
+          margin: 0 0 7.8125vw 0; } }
+		  
+		  
+
+.sub-Story {
+  padding: 160px 0 108px 0;
+  position: relative; }
+  @media screen and (max-width: 1024px) {
+    .sub-Story {
+      padding: 25.78125vw 0 14.32292vw 0; } }
+  .sub-Story .body .sw-Frame {
+    width: 1200px;
+    margin: 0 auto; }
+    @media screen and (max-width: 1024px) {
+      .sub-Story .body .sw-Frame {
+        width: 89.58333vw; } }
+    .sub-Story .body .sw-Frame + div {
+      margin: 48px auto 0 auto; }
+      @media screen and (max-width: 1024px) {
+        .sub-Story .body .sw-Frame + div {
+          margin: 7.8125vw auto 0 auto; } }
+    .sub-Story .body .sw-Frame .content {
+      padding: 50px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      @media screen and (max-width: 1024px) {
+        .sub-Story .body .sw-Frame .content {
+          padding: 7.8125vw 5.20833vw 9.11458vw 5.20833vw;
+          display: block; } }
+      .sub-Story .body .sw-Frame .content .thumbnail {
+        width: 480px;
+        margin: 0 56px 0 0;
+        overflow: hidden; }
+        @media screen and (max-width: 1024px) {
+          .sub-Story .body .sw-Frame .content .thumbnail {
+            width: 100%;
+            margin: 0 0 5.20833vw 0; } }
+      .sub-Story .body .sw-Frame .content .sentence {
+        width: 564px; }
+        @media screen and (max-width: 1024px) {
+          .sub-Story .body .sw-Frame .content .sentence {
+            width: 100%; } }
+        .sub-Story .body .sw-Frame .content .sentence .title {
+          margin: 0 0 36px 0;
+          padding: 0 0 0 2.2em;
+          text-indent: -2.2em;
+          font-size: 26px;
+          font-size: 2.6rem;
+          font-weight: 900;
+          line-height: 1.5;
+          color: #8232a1; }
+          @media screen and (max-width: 1024px) {
+            .sub-Story .body .sw-Frame .content .sentence .title {
+              margin: 0 0 5.72917vw 0;
+              padding: 0 0 0 2.0em;
+              text-indent: -2.0em;
+              font-size: 3.8rem; } }
+          .sub-Story .body .sw-Frame .content .sentence .title span {
+            margin: 0 10px 0 0;
+            color: #fa587c; }
+            @media screen and (max-width: 1024px) {
+              .sub-Story .body .sw-Frame .content .sentence .title span {
+                margin: 0 1.30208vw 0 0; } }
+        .sub-Story .body .sw-Frame .content .sentence .text {
+          margin: 0 0 36px 0;
+          text-align: justify;
+          font-size: 16px;
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 1.75; }
+          @media screen and (max-width: 1024px) {
+            .sub-Story .body .sw-Frame .content .sentence .text {
+              margin: 0 0 5.72917vw 0;
+              text-align: justify;
+              font-size: 2.4rem; } }
+
+.idx-Pv {
+  width: 100%;
+  padding: 64px 0 97px 0;
+  position: relative;
+  background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/index/bg_voice-wave.png) no-repeat 50% 50%,
+  url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/pc/petit-mix/index/bg_pv.png) no-repeat 50% 0; }
+  @media screen and (max-width: 1024px) {
+    .idx-Pv {
+      padding: 8.33333vw 0 11.19792vw 0;
+      background: url(https://anime.d4dj-pj.com/wordpress/wp-content/themes/anime-d4dj-pj/assets/images/sp/petit-mix/index/bg_pv.png) no-repeat 50% 0/100% auto; } }
+  @media print, screen and (min-width: 1921px) {
+    .idx-Pv {
+      background-size: auto auto,100% auto; } }
+  @media screen and (max-width: 1024px) {
+    .idx-Pv .sw-Ttl {
+      margin: 1.43229vw auto 6.51042vw auto; }
+      .idx-Pv .sw-Ttl img {
+        width: 22.00521vw; } }
+  .idx-Pv .body .youtube {
+    text-align: center; }
+    @media screen and (max-width: 1024px) {
+      .idx-Pv .body .youtube {
+        width: 89.58333vw;
+        margin: 0 auto;
+        padding-top: 56.75%;
+        position: relative;
+        z-index: 2; }
+        .idx-Pv .body .youtube iframe {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%; } }
+  .idx-Pv .body .sw-Btn {
+    margin: 60px auto 0 auto; }
+    @media screen and (max-width: 1024px) {
+      .idx-Pv .body .sw-Btn {
+        margin: 7.8125vw auto 0 auto; } }
+
+/*-------------------------------------------------------------------*/
+/* print */
+/*-------------------------------------------------------------------*/
+@media print {
+  * {
+    -webkit-print-color-adjust: exact; } }

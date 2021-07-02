@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block explain_contents %}
+        <section class="sub-Story">
+          <div class="body">
+            <div class="sw-Frame" style="background-color:#cccccc;">
+                <div class="content">
+                    <div class="sentence">
+                        <form name="frm" action="/idea/" method="get">
+                            <p class="title"><span>지역선택</span>:
+                                <select class="box" name = "area">
+                                    <option value="gangwon">강원도</option><option value="geonggi">경기도</option>
+                                    <option value="gyeongnam">경상남도</option><option value="gyeongbook">경상북도</option>
+                                    <option value="gwangju">광주광역시</option><option value="daegu">대구광역시</option>
+                                    <option value="daejeon">대전광역시</option><option value="busan">부산광역시</option>
+                                    <option value="seoul">서울특별시</option><option value="sejong">세종특별자치시</option>
+                                    <option value="incheon">인천광역시</option><option value="jeonnam">전라남도</option>
+                                    <option value="jeonbook">전라북도</option><option value="jeju">제주특별자치도</option>
+                                    <option value="chungnam">충청남도</option><option value="chungbook">충청북도</option>
+                                </select>
+                            </p>
+                            <p class="title">날짜선택 :
+                                <select class="box" name="years">
+                                    <option value="2019">2019년</option><option value="2020">2020년</option></select>
+                                <select class="box" name="months">
+                                    <option value="01">1월</option><option value="02">2월</option>
+                                    <option value="03">3월</option><option value="04">4월</option>
+                                    <option value="05">5월</option><option value="06">6월</option>
+                                    <option value="07">7월</option><option value="08">8월</option>
+                                    <option value="09">9월</option><option value="10">10월</option>
+                                    <option value="11">11월</option><option value="12">12월</option></select>
+                                <input class="box" type="submit"  class="box" id="searchBtn" value="완료">
+                            </p>
+                        </form>
+                        <div class="thumbnail sp_b"><img src="{% static '/img/12.png' %}" width="480" alt="오류"></div>
+                        <p class="text" style="color:#ff6666; font-weight: bold; font-size: 20px;">날씨에 따른 배달량을 확인할 수 있습니다.<br>일별 배달량을 확인할 수 있습니다.</p>
+                    </div>
+                    <div class="sentence">
+                    <div class="thumbnail pc_b">
+                        <img src="{% static '/img/12.png' %}" width="480">
+                        <br><p class="title" style="text-align: center;">[예시]</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+              <div class="sw-Frame" style="background-color:#cccccc;">
+                  <h1 style="text-align:center; color:#ff6666; font-weight: bold; font-size: 35px;">날짜별 전체지역 배달건수</h1>
+                  <div style="width:100%; overflow:auto;">
+                  <table class="greenTable">
+                      <thead><tr>
+                          <th>날짜</th><th>요일</th><th>강원도</th><th>경기도</th><th>경남</th><th>경북</th><th>광주</th><th>대구</th><th>대전</th><th>부산</th><th>서울</th><th>세종</th><th>인천</th><th>전남</th><th>전북</th><th>제주</th><th>충남</th><th>충북</th>
+                      </tr></thead>
+                      <tbody>
+                      {% for ride in rides %}
+                      <tr>
+                          <td>{{ride.days}}</td><td>{{ride.weeks}}</td><td>{{ride.gangwon}}</td><td>{{ride.geonggi}}</td><td>{{ride.gyeongnam}}</td><td>{{ride.gyeongbook}}</td><td>{{ride.gwangju}}</td>
+                          <td>{{ride.daegu}}</td><td>{{ride.daejeon}}</td><td>{{ride.busan}}</td><td>{{ride.seoul}}</td><td>{{ride.sejong}}</td><td>{{ride.incheon}}</td><td>{{ride.jeonnam}}</td>
+                          <td>{{ride.jeonbook}}</td><td>{{ride.jeju}}</td><td>{{ride.chungnam}}</td><td>{{ride.chungbook}}</td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>
+                  </table>
+                  <ul class="pagination"></ul>
+                  </div>
+              </div>
+          </div>
+        </section>
+{% endblock explain_contents %}
+

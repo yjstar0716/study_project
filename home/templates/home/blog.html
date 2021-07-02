@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+<section class="idx-Onair">
+    <div class="st-Inner"><br><br><br><br><br><br>
+        <h2 class="sw-Ttl"></h2>
+        <div class="body"><div class="sw-Frame" style="background-color:#ffa0af;">
+            <div class="channel">
+                <div class="sw-Frame" style="width:32%;">
+                    <ul class="st-Header_Nav_List">
+                        <li><p>
+
+                        </p></li>
+                        <li>
+                            <p class="sw-Subheading" style="font-size:50px; text-align:center;">사장님꿀팁</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="st-Header_Nav_List">
+                <div class="sw-Frame" style="width:100%; postion:relative;">
+
+                    <div style="width:100%; height:450px; overflow:auto;">
+                        <table class="greenTable" style="padding:10px;">
+                            <thead><tr>
+                                <th>글번호</th><th>제목</th><th>작성자</th><th>등록일</th>
+                            </tr></thead>
+                            <tbody>
+                            {% if board_list %}
+                            {% for board in board_list %}
+                            <tr>
+                                <td>{{board.num}}</td>
+                                <td><a href="{% url 'detail' board.num %}">{{board.title}}</a></td>
+                                <td>{{board.name}}</td>
+                                <td>{{board.day}}</td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                        <table class="greenTable" style="padding:10px;">
+                            <tr>
+                                <td>
+                                    {% for p in totalPageCnt %}
+                                        {% if curr_page != p %} <a href="{% url 'blog' p %} ">{{p}}</a>
+                                        {% else %}
+                                            {{ p }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </ul>
+        </div></div>
+    </div>
+</section>
+
+{% endblock explain_contents %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+<section class="sub-Story">
+    <div class="body">
+    <div class="sw-Frame" style="background-color:#cccccc;">
+        <div class="content" style="padding: 20px 20px 20px 20px;">
+            <div class="sw-Frame" style="width:40%; margin:0px auto 0px 10%;">
+                <div class="sentence" style="width:100%;">
+                    <p class="title" style="text-align:center; margin: 20px 20px 20px 20px;">
+                        <span>#{{board.num}}</span>{{board.title}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="content" style="padding: 0px 20px 20px 20px;">
+            <div class="sw-Frame" style="width:80%;">
+                <div class="sentence" style="width:100%; padding:20px 20px 20px 20px;">
+                    <p class="title" style="">{{board.text}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="content" style="padding: 0px 20px 20px 20px;">
+            <div class="sw-Frame" style="width:10%; margin:0px auto 0px 10%;">
+                <div class="sentence" style="width:100%;">
+                    <p class="title" style="text-align:center; margin: 20px 0 20px 0;">
+                        <a href="{% url 'blogpower' %}">글 목록</a>
+                    </p>
+                </div>
+            </div>
+            <div class="sw-Frame" style="width:30%; margin:0px 10% 0px auto;">
+                <div class="sentence" style="width:100%;">
+                    <p class="title" style="text-align:center; margin: 20px 0 20px 0;">
+                        <span>{{board.day}}</span>{{board.name}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+{% endblock explain_contents %}

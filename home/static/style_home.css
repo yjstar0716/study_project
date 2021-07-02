@@ -1,0 +1,130 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+    .hexagon {
+      width: 200px; height: 110px;
+      position: relative; text-align: center;
+      font-size: 100px; margin: 50px 0px 50px 0px;
+      background: #FF9999;}
+    .hexagon:before {
+      content: "";
+      position: absolute; top: -50px; left: 0; width: 0; height: 0;
+      border-left: 100px solid transparent; border-right: 100px solid transparent;
+      border-bottom: 50px solid #FF9999;}
+    .hexagon:after {
+      content: "";
+      position: absolute; bottom: -50px; left: 0; width: 0; height: 0;
+      border-left: 100px solid transparent; border-right: 100px solid transparent;
+      border-top: 50px solid #FF9999;}
+
+    .hexagon2 {
+      width: 200px; height: 110px;
+      position: relative; text-align: center;
+      font-size: 100px; margin: 50px 0px 50px 0px;
+      background: #FF6666;}
+    .hexagon2:before {
+      content: "";
+      position: absolute; top: -50px; left: 0; width: 0; height: 0;
+      border-left: 100px solid transparent; border-right: 100px solid transparent;
+      border-bottom: 50px solid #FF6666;}
+    .hexagon2:after {
+      content: "";
+      position: absolute; bottom: -50px; left: 0; width: 0; height: 0;
+      border-left: 100px solid transparent; border-right: 100px solid transparent;
+      border-top: 50px solid #FF6666;}
+
+  .title{
+  margin: 0px auto 24px auto;
+  width: 100%;
+  text-align:center;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  }
+    .title span {
+        color: red;
+    }
+
+  .sub-title{
+  width: 80%;
+  text-align:center;
+  font-size: 25px;
+  color: black;
+  font-family: 'Jeju Gothic', sans-serif;
+  margin: 0px 10% 24px 10%;
+  }
+
+  .sw-Frame-re {
+  width: 100%;
+  will-change: filter;
+  }
+
+  table.boxin {
+    margin: 48px auto 48px auto;
+	border-collapse: separate;
+	border-spacing: 10px;
+	}
+	table.boxin td {
+		vertical-align: middle;
+		width: 100px;
+		height:100px;
+		}
+	table.boxin td.in {
+		background: #e7708d;
+		box-shadow: 5px 5px 5px -2px;
+		}
+	table.boxin td.text {
+		font-size:50px;
+		color: black;
+		font-weight: bold;
+		}
+
+  .idx-home2 {
+  padding: 160px 0 108px 0;
+  position: relative;
+  background: url({% static '/img/bg2-1.png' %}) no-repeat 50% 0;
+  background-size: 100% 100%;
+  }
+
+  .idx-home2 .body .sw-Frame-re {
+    width: 1200px;
+    margin: 0 auto; }
+
+    .idx-home2 .body .sw-Frame-re + div {
+		margin: 48px auto 0 auto; }
+
+    .idx-home2 .body .sw-Frame-re .content {
+		padding: 50px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex; }
+
+      .idx-home2 .body .sw-Frame-re .content .thumbnail {
+        width: 480px;
+        margin: 0 56px 0 0;
+        overflow: hidden; }
+
+      .idx-home2 .body .sw-Frame-re .content .sentence {
+        width: 564px; }
+
+        .idx-home2 .body .sw-Frame-re .content .sentence .title {
+          margin: 0 0 36px 0;
+          padding: 0 0 0 2.2em;
+          text-indent: -2.2em;
+          font-size: 26px;
+          font-size: 2.6rem;
+          font-weight: 900;
+          line-height: 1.5;
+          color: #8232a1; }
+
+          .idx-home2 .body .sw-Frame-re .content .sentence .title span {
+            margin: 0 10px 0 0;
+            color: #fa587c; }
+
+        .idx-home2 .body .sw-Frame-re .content .sentence .text {
+          margin: 0 0 36px 0;
+          text-align: justify;
+          font-size: 16px;
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 1.75; }

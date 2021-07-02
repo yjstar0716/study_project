@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'style_home.css' %}" type="text/css" charset="utf-8">
+{% endblock head%}
+{% block explain_contents %}
+        <section class="idx-home2" style="background: url({% static 'img/bg2-1.png' %})no-repeat 50% 0; background-size: 100% 100%;">
+          <div class="body">
+            <div class="sw-Frame-re">
+                <table class="boxin">
+                    <tr>
+                        <td></td>
+                        <td class="in" style="background:#FFCC00;"></td>
+                        <td class="in" style="background: url({% static '/img/td4.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td class="in" style="background: url({% static '/img/td7.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td></td> <td></td>
+                        <td class="in" style="background: url({% static '/img/td6.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td class="in" style="background:#669900;"></td>
+                        <td class="in" style="background: url({% static '/img/td9.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td></td> <td></td>
+                        <td class="in" style="background: url({% static '/img/td3.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td class="in" style="background: url({% static '/img/td1.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td></td> <td></td>
+                        <td class="in" style="background: url({% static '/img/td5.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td class="in" style="background: url({% static '/img/td8.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                        <td class="in" style="background: url({% static '/img/td2.jpg' %}) no-repeat; background-size: 100% 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td></td> <td></td> <td></td>
+                        <td class="in"style="background:#003333;"></td>
+                        <td></td> <td></td>
+                        <td colspan="3" class="text">배달 분석<br>
+                        <div style="font-size:25px; color:blue;">분석으로 돈벌자!</div></td>
+                        <td></td> <td></td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+        </section>
+        <section class="idx-home2" style="background: url({% static 'img/bg1.png' %}); padding: 70px 0 100px 0;">
+            <div class="body">
+                <div class="title"><span>Delivery</span> is Best Business!<i class="fas fa-comments-dollar"></i></div>
+                <div class="sub-title">분석은 이런곳에 쓰입니다.</div>
+                <div class="sub-title">
+                    <table class="boxin" style="border-spacing: 30px;">
+                        <tr>
+                            <td><div class="hexagon2"><i class="fas fa-recycle"></i></div></td>
+                            <td><div class="hexagon"><i class="fas fa-store"></i></div></td>
+                            <td><div class="hexagon2"><i class="fas fa-user-friends"></i></div></td>
+                            <td><div class="hexagon"><i class="fas fa-bed"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td style="height:50px;">재고 줄이기<br><div style="font-size:13px;">예측 배달량을 활용하여<br>가게재고가 남지 않도록 한다</div></td>
+                            <td style="height:50px;">가게입지 선정<br><div style="font-size:13px;">가게입지선정시 배달량을 고려하여<br>선택가능하게 한다</div></td>
+                            <td style="height:50px;">인원 배치수 선정<br><div style="font-size:13px;">요일별 배달량을 보고<br>인원을 배정한다</div></td>
+                            <td style="height:50px;">휴무일 판단<br><div style="font-size:13px;">배달량이 적은 날을 확인해<br>휴일을 정할 수 있다</div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="idx-home2" style="background: url({% static 'img/bg3-1.png' %})no-repeat 50% 0; background-size: 100% 100%;">
+            <div class="body">
+                <div class="sw-Frame-re">
+                    <div class="title" style="color:#003300; font-size:70px">Director Comment</div>
+                    <br><br><br><br>
+                    <div class="sub-title" style="font-size:20px;">본 사이트는 요일, 지역등의 요소를 감안하여 배달량을 분석, 예측하는 사이트입니다.
+                        <br>이를 바탕으로 전국사장님, 예비사장님들이 가게를 창업, 운영하는데 있어 도움을 주고자 합니다.</div>
+                    <div class="sub-title" style="font-size:17px; color:#333333;">향후에는 더욱 세부적인 지역 혹은 날씨별로 예측을 할 수 있도록 발전시킬 예정입니다.</div>
+                    <br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+        </section>
+{% endblock explain_contents %}
+
